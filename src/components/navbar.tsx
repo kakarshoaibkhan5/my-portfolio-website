@@ -19,11 +19,17 @@ export function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <nav className="fixed top-0 w-full bg-white/80 dark:bg-gray-950/80 backdrop-blur-md z-50 border-b border-gray-200 dark:border-gray-800">
+    <nav className="fixed top-0 w-full z-50 border-b border-slate-200/70 dark:border-white/10 bg-white/70 dark:bg-[#060814]/70 backdrop-blur-xl">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <Link href="/" className="text-xl font-bold">
-            Shoaib
+          <Link
+            href="/"
+            className="group inline-flex items-center gap-2 text-base sm:text-xl font-bold tracking-tight whitespace-nowrap"
+          >
+            <span className="h-2 w-2 rounded-full bg-gradient-to-r from-sky-400 to-violet-500 shadow-[0_0_12px_rgba(56,189,248,0.9)]" />
+            <span className="bg-gradient-to-r from-slate-900 to-slate-600 dark:from-white dark:to-slate-300 bg-clip-text text-transparent">
+              Shoaib Ur Rehman
+            </span>
           </Link>
 
           {/* Desktop Navigation */}

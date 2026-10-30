@@ -16,12 +16,12 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Shoaib - AI Developer Portfolio",
+  title: "Shoaib Ur Rehman - AI Developer Portfolio",
   description: "AI Developer | I build 10x faster with OpenCode. Modern portfolio showcasing projects, services, and contact information.",
   keywords: ["AI Developer", "OpenCode", "Next.js", "Portfolio", "Web Development", "AI Automation"],
-  authors: [{ name: "Shoaib" }],
+  authors: [{ name: "Shoaib Ur Rehman" }],
   openGraph: {
-    title: "Shoaib - AI Developer Portfolio",
+    title: "Shoaib Ur Rehman - AI Developer Portfolio",
     description: "AI Developer | I build 10x faster with OpenCode",
     type: "website",
   },

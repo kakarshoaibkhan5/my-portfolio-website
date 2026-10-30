@@ -4,118 +4,210 @@ import Link from "next/link"
 import { motion } from "framer-motion"
 import { ArrowRight, Code, Zap, Sparkles } from "lucide-react"
 
+const stats = [
+  { value: "10x", label: "Faster delivery" },
+  { value: "7", label: "AI certifications" },
+  { value: "5", label: "Live projects" },
+]
+
+const services = [
+  {
+    icon: Code,
+    title: "Website Development",
+    description:
+      "Modern, responsive websites built with Next.js and Tailwind CSS",
+  },
+  {
+    icon: Zap,
+    title: "AI Automation",
+    description:
+      "Intelligent automation solutions to streamline your workflows",
+  },
+  {
+    icon: Sparkles,
+    title: "Academic Writing",
+    description:
+      "Professional academic content and technical documentation",
+  },
+]
+
 export default function Home() {
   return (
-    <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="relative px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
-        <div className="max-w-7xl mx-auto">
+    <div className="relative min-h-screen overflow-hidden">
+      {/* Ambient background */}
+      <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
+        <div className="hero-grid absolute inset-x-0 top-0 h-[680px]" />
+        <div className="absolute -top-44 left-1/2 h-[420px] w-[760px] -translate-x-1/2 rounded-full bg-blue-500/20 blur-[140px] dark:bg-blue-600/25" />
+        <div className="absolute -top-24 right-0 h-[380px] w-[380px] rounded-full bg-violet-500/15 blur-[120px] dark:bg-violet-600/20" />
+        <div className="absolute top-[420px] -left-32 h-[320px] w-[420px] rounded-full bg-cyan-400/10 blur-[120px] dark:bg-cyan-500/10" />
+      </div>
+
+      {/* Hero */}
+      <section className="relative px-4 pb-16 pt-16 sm:px-6 sm:pt-24 lg:px-8 lg:pb-24 lg:pt-28">
+        <div className="mx-auto max-w-7xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center max-w-4xl mx-auto"
+            className="mx-auto max-w-4xl text-center"
           >
+            {/* Portrait */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
+              initial={{ opacity: 0, scale: 0.92 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.2, duration: 0.5 }}
-              className="flex flex-col items-center gap-4 mb-8"
+              transition={{ delay: 0.15, duration: 0.5 }}
+              className="mb-8 flex flex-col items-center gap-5"
             >
               <div className="relative">
-                <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 blur-md opacity-70"></div>
-                <img
-                  src="/shoaib-profile.jpg"
-                  alt="Shoaib Ur Rehman"
-                  className="relative w-32 h-32 sm:w-40 sm:h-40 rounded-full object-cover border-4 border-blue-500 shadow-[0_0_60px_-10px_rgba(59,130,246,0.9)]"
-                />
+                <div className="absolute inset-0 -z-10 scale-125 rounded-full bg-blue-500/30 blur-3xl dark:bg-blue-500/40" />
+                <div className="rounded-full bg-gradient-to-br from-sky-400 via-blue-500 to-violet-500 p-[3px] shadow-[0_0_60px_-10px_rgba(59,130,246,0.85)]">
+                  <img
+                    src="/shoaib-profile.jpg"
+                    alt="Shoaib Ur Rehman"
+                    className="h-28 w-28 rounded-full object-cover sm:h-36 sm:w-36"
+                  />
+                </div>
               </div>
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-gray-100 dark:bg-gray-800 text-sm">
-                <Sparkles className="h-4 w-4 mr-2" />
-                <span>AI Developer</span>
+
+              <div className="glass-pill inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-medium text-slate-700 sm:text-sm dark:text-slate-200">
+                <span className="relative flex h-2 w-2">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
+                  <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
+                </span>
+                Available for freelance &amp; full-time
               </div>
             </motion.div>
-            
-            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-6">
+
+            <h1 className="mb-6 text-balance text-4xl font-bold leading-[1.06] tracking-tight sm:text-6xl lg:text-7xl">
               I build{" "}
-              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600 bg-clip-text text-transparent dark:from-sky-300 dark:via-blue-400 dark:to-violet-400 dark:drop-shadow-[0_0_35px_rgba(56,189,248,0.35)]">
                 10x faster
-              </span>{" "}
-              with OpenCode
+              </span>
+              <br className="hidden sm:block" /> with OpenCode
             </h1>
-            
-            <p className="text-xl sm:text-2xl text-gray-600 dark:text-gray-400 mb-10 max-w-3xl mx-auto">
-              AI Developer | I build 10x faster with OpenCode
+
+            <p className="mx-auto mb-10 max-w-2xl text-base leading-relaxed text-slate-600 sm:text-lg md:text-xl dark:text-slate-400">
+              AI Developer based in Lahore, Pakistan. I ship modern web apps,
+              intelligent automations, and e-commerce stores — clean, fast, and
+              built to deliver results.
             </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+
+            <div className="flex flex-col justify-center gap-3 sm:flex-row sm:gap-4">
               <Link
                 href="/projects"
-                className="inline-flex items-center justify-center px-8 py-3 rounded-lg bg-gray-900 dark:bg-white text-white dark:text-gray-900 hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors font-medium"
+                className="group inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 to-violet-600 px-7 py-3.5 text-sm font-semibold text-white shadow-lg shadow-blue-600/25 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-blue-600/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent sm:text-base"
               >
                 View Projects
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center px-8 py-3 rounded-lg border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors font-medium"
+                className="glass-card inline-flex items-center justify-center rounded-xl px-7 py-3.5 text-sm font-semibold text-slate-800 transition-all duration-300 hover:-translate-y-0.5 hover:border-blue-500/40 dark:text-slate-100 dark:hover:border-white/20 sm:text-base"
               >
                 Get in Touch
               </Link>
             </div>
+
+            {/* Stat strip */}
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4, duration: 0.5 }}
+              className="mx-auto mt-14 grid max-w-2xl grid-cols-3 gap-3 sm:gap-4"
+            >
+              {stats.map((stat) => (
+                <div
+                  key={stat.label}
+                  className="glass-card rounded-2xl px-3 py-4 sm:px-4 sm:py-5"
+                >
+                  <div className="bg-gradient-to-r from-blue-600 to-violet-600 bg-clip-text text-2xl font-bold text-transparent dark:from-sky-300 dark:to-violet-400 sm:text-3xl">
+                    {stat.value}
+                  </div>
+                  <div className="mt-1 text-[10px] font-medium uppercase tracking-wider text-slate-500 dark:text-slate-400 sm:text-xs">
+                    {stat.label}
+                  </div>
+                </div>
+              ))}
+            </motion.div>
           </motion.div>
         </div>
       </section>
 
-      {/* Quick Preview Sections */}
-      <section className="px-4 sm:px-6 lg:px-8 py-20">
-        <div className="max-w-7xl mx-auto">
+      {/* What I Do */}
+      <section className="relative px-4 pb-20 sm:px-6 lg:px-8 lg:pb-24">
+        <div className="mx-auto max-w-7xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="mb-14 text-center"
           >
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4">What I Do</h2>
-            <p className="text-lg text-gray-600 dark:text-gray-400">
-              Building modern solutions with speed and precision
+            <span className="text-xs font-semibold uppercase tracking-[0.22em] text-blue-600 dark:text-sky-400">
+              What I do
+            </span>
+            <h2 className="mb-4 mt-3 text-3xl font-bold tracking-tight sm:text-4xl">
+              Built to ship, designed to last
+            </h2>
+            <p className="mx-auto max-w-2xl text-base text-slate-600 sm:text-lg dark:text-slate-400">
+              Three ways I help founders and teams move faster without cutting
+              corners on quality.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                icon: Code,
-                title: "Website Development",
-                description: "Modern, responsive websites built with Next.js and Tailwind CSS"
-              },
-              {
-                icon: Zap,
-                title: "AI Automation",
-                description: "Intelligent automation solutions to streamline your workflows"
-              },
-              {
-                icon: Sparkles,
-                title: "Academic Writing",
-                description: "Professional academic content and technical documentation"
-              }
-            ].map((service, index) => (
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+            {services.map((service, index) => (
               <motion.div
-                key={index}
+                key={service.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1, duration: 0.6 }}
                 viewport={{ once: true }}
-                className="p-6 rounded-xl border border-gray-200 dark:border-gray-800 hover:border-gray-300 dark:hover:border-gray-700 transition-colors"
+                className="glass-card group rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_70px_-28px_rgba(59,130,246,0.55)] sm:p-7"
               >
-                <service.icon className="h-12 w-12 mb-4 text-blue-600" />
-                <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
-                <p className="text-gray-600 dark:text-gray-400">{service.description}</p>
+                <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-blue-500/15 to-violet-500/15 text-blue-600 ring-1 ring-blue-500/20 dark:text-sky-400 dark:ring-white/10">
+                  <service.icon className="h-6 w-6" />
+                </div>
+                <h3 className="mb-2 text-lg font-semibold tracking-tight sm:text-xl">
+                  {service.title}
+                </h3>
+                <p className="text-sm leading-relaxed text-slate-600 dark:text-slate-400 sm:text-base">
+                  {service.description}
+                </p>
               </motion.div>
             ))}
           </div>
         </div>
+      </section>
+
+      {/* Closing CTA */}
+      <section className="relative px-4 pb-24 sm:px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="glass-card relative mx-auto max-w-4xl overflow-hidden rounded-3xl px-6 py-12 text-center sm:px-12 sm:py-14"
+        >
+          <div
+            aria-hidden
+            className="absolute -top-24 left-1/2 h-56 w-[420px] -translate-x-1/2 rounded-full bg-blue-500/25 blur-3xl dark:bg-blue-500/20"
+          />
+          <h2 className="relative mb-3 text-2xl font-bold tracking-tight sm:text-3xl">
+            Have a project in mind?
+          </h2>
+          <p className="relative mx-auto mb-8 max-w-xl text-sm text-slate-600 dark:text-slate-400 sm:text-base">
+            Tell me what you&apos;re building. I&apos;ll show you how fast it can
+            ship.
+          </p>
+          <Link
+            href="/contact"
+            className="group relative inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 to-violet-600 px-7 py-3.5 text-sm font-semibold text-white shadow-lg shadow-blue-600/25 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-blue-600/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent sm:text-base"
+          >
+            Start a conversation
+            <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+          </Link>
+        </motion.div>
       </section>
     </div>
   )
