@@ -26,13 +26,13 @@ export default function About() {
           className="prose prose-lg dark:prose-invert max-w-none mb-16"
         >
           <p className="text-lg leading-relaxed">
-            I'm Shoaib, an AI Developer who leverages cutting-edge tools like OpenCode to build 
+            I&apos;m Shoaib, an AI Developer who leverages cutting-edge tools like OpenCode to build 
             applications 10x faster without compromising on quality. I specialize in creating 
             modern, responsive web applications and intelligent automation solutions.
           </p>
           <p className="text-lg leading-relaxed">
             My approach combines technical expertise with efficient development workflows, 
-            allowing me to deliver high-quality projects rapidly. Whether it's a complex web 
+            allowing me to deliver high-quality projects rapidly. Whether it&apos;s a complex web 
             application, AI-powered automation, or academic content, I focus on clean, 
             professional solutions that exceed expectations.
           </p>

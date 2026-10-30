@@ -2,29 +2,14 @@
 
 import { motion } from "framer-motion"
 import { ExternalLink, Github } from "lucide-react"
+import { projects } from "@/data/projects"
 
-const projects = [
-  {
-    title: "Academic Tool",
-    description: "A comprehensive academic assistance platform built for students and educators with modern features and intuitive interface.",
-    tags: ["Next.js", "TypeScript", "Tailwind CSS"],
-    github: "#",
-    live: "#"
-  },
-  {
-    title: "SaaS App",
-    description: "A scalable Software as a Service application with subscription management, user authentication, and powerful dashboard.",
-    tags: ["Next.js", "Stripe", "Prisma"],
-    github: "#",
-    live: "#"
-  },
-  {
-    title: "Portfolio",
-    description: "A modern, responsive portfolio website showcasing projects and skills with smooth animations and dark mode support.",
-    tags: ["Next.js", "Framer Motion", "Tailwind CSS"],
-    github: "#",
-    live: "#"
-  }
+const accents = [
+  "from-blue-500 to-purple-600",
+  "from-cyan-500 to-blue-600",
+  "from-emerald-500 to-teal-600",
+  "from-violet-500 to-fuchsia-600",
+  "from-orange-500 to-pink-600",
 ]
 
 export default function Projects() {
@@ -52,14 +37,18 @@ export default function Projects() {
               transition={{ delay: index * 0.1, duration: 0.6 }}
               className="group rounded-xl border border-gray-200 dark:border-gray-800 overflow-hidden hover:border-gray-300 dark:hover:border-gray-700 transition-all hover:shadow-lg"
             >
-              <div className="h-48 bg-gradient-to-br from-blue-500 to-purple-600"></div>
+              <div
+                className={`h-48 bg-gradient-to-br ${
+                  accents[index % accents.length]
+                }`}
+              ></div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
                 <p className="text-gray-600 dark:text-gray-400 mb-4 line-clamp-3">
                   {project.description}
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tags.map((tag, tagIndex) => (
+                  {project.tech.map((tag, tagIndex) => (
                     <span
                       key={tagIndex}
                       className="px-3 py-1 text-xs rounded-full bg-gray-100 dark:bg-gray-800"
@@ -70,14 +59,18 @@ export default function Projects() {
                 </div>
                 <div className="flex gap-4">
                   <a
-                    href={project.github}
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
                   >
                     <Github className="h-4 w-4" />
                     Code
                   </a>
                   <a
-                    href={project.live}
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
                   >
                     <ExternalLink className="h-4 w-4" />

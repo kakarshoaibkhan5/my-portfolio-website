@@ -34,7 +34,7 @@ export default function Contact() {
         >
           <h1 className="text-4xl sm:text-5xl font-bold mb-6">Get In Touch</h1>
           <p className="text-xl text-gray-600 dark:text-gray-400">
-            Let's discuss your next project
+            Let&apos;s discuss your next project
           </p>
         </motion.div>
 
@@ -46,7 +46,7 @@ export default function Contact() {
           >
             <h2 className="text-2xl font-semibold mb-6">Contact Information</h2>
             <p className="text-gray-600 dark:text-gray-400 mb-8">
-              Have a project in mind? Reach out and let's create something amazing together.
+              Have a project in mind? Reach out and let&apos;s create something amazing together.
             </p>
             
             <button
