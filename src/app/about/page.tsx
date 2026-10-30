@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { motion } from "framer-motion"
 import { Code2, Brain, Rocket } from "lucide-react"
 
@@ -26,15 +27,33 @@ export default function About() {
           className="prose prose-lg dark:prose-invert max-w-none mb-16"
         >
           <p className="text-lg leading-relaxed">
-            I&apos;m Shoaib, an AI Developer who leverages cutting-edge tools like OpenCode to build 
-            applications 10x faster without compromising on quality. I specialize in creating 
-            modern, responsive web applications and intelligent automation solutions.
+            I&apos;m <strong>Shoaib Ur Rehman</strong>, an AI Developer based in
+            Lahore, Pakistan. I leverage cutting-edge tools like OpenCode to
+            build modern, responsive web applications and intelligent
+            automation solutions 10x faster without compromising on quality.
           </p>
           <p className="text-lg leading-relaxed">
-            My approach combines technical expertise with efficient development workflows, 
-            allowing me to deliver high-quality projects rapidly. Whether it&apos;s a complex web 
-            application, AI-powered automation, or academic content, I focus on clean, 
-            professional solutions that exceed expectations.
+            Google &amp; Coursera Certified -{" "}
+            <Link
+              href="/certificates"
+              className="font-semibold text-blue-600 dark:text-blue-400 underline underline-offset-2"
+            >
+              7 Verified Certificates
+            </Link>{" "}
+            in AI, Google Cloud, and Digital Marketing including AI Essentials,
+            Productivity with AI, Innovating with Google Cloud AI, Shopify
+            E-commerce, and Facebook &amp; Google Ads.
+          </p>
+          <p className="text-lg leading-relaxed">
+            My approach combines technical expertise with efficient AI-powered
+            workflows. Whether it&apos;s a complex web application, AI
+            automation, or an e-commerce store that drives sales, I focus on
+            clean, professional, and results-driven solutions that exceed
+            expectations.
+          </p>
+          <p className="text-lg leading-relaxed">
+            <span className="font-semibold">My Mission:</span> To help Pakistani
+            small businesses grow faster with AI and modern tech.
           </p>
         </motion.div>
 
@@ -69,6 +88,19 @@ export default function About() {
             </motion.div>
           ))}
         </div>
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.7, duration: 0.6 }}
+          className="mt-10 text-center text-sm text-gray-500 dark:text-gray-400"
+        >
+          <span className="font-semibold text-gray-700 dark:text-gray-300">
+            Tech Stack:
+          </span>{" "}
+          OpenCode | Next.js | Vercel | Google AI &amp; Cloud | Shopify | Facebook
+          Ads | Google Ads
+        </motion.p>
       </div>
     </div>
   )
