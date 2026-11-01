@@ -8,9 +8,25 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    title: "Physics Seekho - AI Physics Tutor",
+    description:
+      "Midnight Aurora UI ke sath Urdu/English AI physics platform. 8 interactive lessons, SVG diagrams, aur live AI Chat Tutor jo F=ma tak har sawal ka jawab deta hai.",
+    tech: ["Next.js 15", "Tailwind", "AI Tutor", "Urdu/English"],
+    liveUrl: "/projects/physics-seekho",
+    githubUrl: "https://github.com/kakarshoaibkhan5/my-portfolio-website",
+  },
+  {
+    title: "CERN AI Lab - Interactive",
+    description:
+      "CERN inspired interactive AI experiments lab for Pakistani students - visual AI concepts with live demos.",
+    tech: ["Next.js 15", "AI", "CERN", "Interactive"],
+    liveUrl: "/projects/cern-ai-lab",
+    githubUrl: "https://github.com/kakarshoaibkhan5/my-portfolio-website",
+  },
+  {
     title: "Quantum Visual Lab",
     description:
-      "Interactive quantum physics simulator with a live double-slit experiment, Schrödinger wave packets and Heisenberg uncertainty — built for physics research outreach.",
+      "Interactive quantum physics simulator with a live double-slit experiment, Schrödinger wave packets and Heisenberg uncertainty - built for physics research outreach.",
     tech: ["Next.js 15", "p5.js", "Canvas API", "Tailwind"],
     liveUrl: "https://quantum-lab-navy.vercel.app",
     githubUrl: "https://quantum-lab-navy.vercel.app/source",
@@ -46,7 +62,7 @@ export const projects: Project[] = [
   {
     title: "AI Resume Parser",
     description: "AI tool that parses resumes using NLP.",
-    tech: ["Python", "Streamlit", "OpenAI"],
+    tech: ["Python", "StreamLit", "OpenAI"],
     liveUrl: "https://ai-resume-parser-kakarshoaib.streamlit.app",
     githubUrl: "https://github.com/kakarshoaibkhan5/ai-resume-parser",
   },
