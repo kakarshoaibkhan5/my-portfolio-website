@@ -19,7 +19,7 @@ const navLinks: NavLink[] = [
   { href: "/about", label: "About" },
   { href: "/projects", label: "Projects" },
   { href: "/projects/physics-seekho", label: "Physics Seekho" },
-  { href: "/projects/cern-ai-dashboard", label: "AI Lab" },
+  { href: "/projects/cern-ai-lab", label: "AI Lab" },
   { href: "/projects/quantum-lab", label: "Quantum Lab", prefetch: false },
   { href: "/services", label: "Services" },
   { href: "/certificates", label: "Certificates" },
@@ -31,7 +31,7 @@ export function Navbar() {
   const pathname = usePathname()
   const isDarkPage =
     (pathname?.startsWith("/projects/physics-seekho") ||
-      pathname?.startsWith("/projects/cern-ai-dashboard")) ??
+      pathname?.startsWith("/projects/cern-ai-lab")) ??
     false
 
   const linkClass = isDarkPage
