@@ -29,7 +29,7 @@ export const projects: Project[] = [
       "Interactive quantum physics simulator with a live double-slit experiment, Schrödinger wave packets and Heisenberg uncertainty - built for physics research outreach.",
     tech: ["Next.js 15", "p5.js", "Canvas API", "Tailwind"],
     liveUrl: "https://quantum-lab-navy.vercel.app",
-    githubUrl: "https://quantum-lab-navy.vercel.app/source",
+    githubUrl: "https://github.com/kakarshoaibkhan5/my-portfolio-website",
   },
   {
     title: "SaaS Design System",
