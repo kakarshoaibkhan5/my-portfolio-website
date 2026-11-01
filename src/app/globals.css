@@ -89,3 +89,82 @@ body {
     scroll-behavior: auto;
   }
 }
+
+/* Print: A4 single-page CV (src/app/cv) */
+@page {
+  size: A4;
+  margin: 12mm;
+}
+
+@media print {
+  /* Compact the sheet slightly so the whole CV lands on one A4 page
+     (screen uses a roomier 840px column, print gets ~186mm of width). */
+  .cv-sheet {
+    zoom: 0.88;
+  }
+
+  /* Tight tracking keeps headings copy-pasteable ("SUMMARY", not "S UMMARY"),
+     which is what an ATS parses. */
+  .cv-sheet h2 {
+    letter-spacing: 0.02em !important;
+  }
+}
+
+@media print {
+  html,
+  body {
+    background: #ffffff !important;
+    background-image: none !important;
+    color: #000000 !important;
+  }
+
+  body {
+    min-height: auto;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Site chrome is never part of the printed document */
+  nav,
+  footer,
+  .print\:hidden {
+    display: none !important;
+  }
+
+  /* layout.tsx wraps every page in <main className="pt-16"> */
+  main {
+    padding-top: 0 !important;
+  }
+
+  /* The sheet is already the page - drop the on-screen framing */
+  .cv-sheet {
+    box-shadow: none !important;
+    outline: none !important;
+    border: 0 !important;
+    --tw-ring-shadow: 0 0 #0000 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: none !important;
+    width: 100% !important;
+  }
+
+  a {
+    color: inherit !important;
+    text-decoration: none !important;
+  }
+
+  /* Keep headings with the content that follows them */
+  h1,
+  h2,
+  h3 {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  section,
+  li,
+  p {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}
