@@ -6,6 +6,15 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  async redirects() {
+    return [
+      {
+        source: "/projects/quantum-lab",
+        destination: "https://quantum-lab-navy.vercel.app",
+        permanent: false,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

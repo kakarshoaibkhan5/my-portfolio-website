@@ -8,6 +8,14 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    title: "Quantum Visual Lab",
+    description:
+      "Interactive quantum physics simulator with a live double-slit experiment, Schrödinger wave packets and Heisenberg uncertainty — built for physics research outreach.",
+    tech: ["Next.js 15", "p5.js", "Canvas API", "Tailwind"],
+    liveUrl: "https://quantum-lab-navy.vercel.app",
+    githubUrl: "https://quantum-lab-navy.vercel.app/source",
+  },
+  {
     title: "SaaS Design System",
     description: "Premium Design System with 30+ reusable components.",
     tech: ["Next.js", "Tailwind", "TypeScript"],
