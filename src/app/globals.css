@@ -100,7 +100,17 @@ body {
   /* Compact the sheet slightly so the whole CV lands on one A4 page
      (screen uses a roomier 840px column, print gets ~186mm of width). */
   .cv-sheet {
-    zoom: 0.88;
+    zoom: 0.87;
+  }
+
+  /* Compact the vertical rhythm in print so the last section still lands
+     inside the A4 page with a comfortable bottom margin. */
+  .cv-sheet section {
+    margin-top: 10px !important;
+  }
+
+  .cv-sheet section > div {
+    margin-top: 6px !important;
   }
 
   /* Tight tracking keeps headings copy-pasteable ("SUMMARY", not "S UMMARY"),

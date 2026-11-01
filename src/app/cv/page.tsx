@@ -5,7 +5,7 @@ import { ArrowLeft, Download, ExternalLink, Github, Mail, MapPin, Phone } from "
 export const metadata: Metadata = {
   title: "CV - Shoaib Ur Rehman | Physics, AI & Scientific Computing",
   description:
-    "Europass-style CV of Shoaib Ur Rehman - BS Hons Physics (GCU Lahore), computational and plasma physics research, and AI / scientific computing projects. Open to MSc and research internships in Germany/EU.",
+    "Europass-style CV of Shoaib Ur Rehman - BS Physics (GCU Lahore), computational and plasma physics research, and AI / data science projects. Seeking MSc admission or research internship in Physics, Data Science & AI in Germany/EU.",
   keywords: [
     "Shoaib Ur Rehman",
     "CV",
@@ -14,13 +14,16 @@ export const metadata: Metadata = {
     "Plasma Physics",
     "Computational Physics",
     "Data Science",
-    "Scientific Computing",
-    "MSc Germany",
+    "Artificial Intelligence",
+    "Quantum Computing",
+    "Machine Learning",
+    "MSc Physics Germany",
+    "DAAD",
   ],
   openGraph: {
     title: "CV - Shoaib Ur Rehman",
     description:
-      "Physics graduate (GCU Lahore) seeking MSc / research internship in Geophysics, Data Science or Scientific Computing in Germany/EU.",
+      "Physics graduate (GCU Lahore) seeking MSc admission or research internship in Physics, Data Science & AI in Germany/EU.",
     type: "profile",
   },
 }
@@ -37,12 +40,12 @@ const contact = {
 
 const education = [
   {
-    degree: "BS Hons Physics",
-    school: "GCU Lahore",
+    degree: "BS Physics",
+    school: "Government College University (GCU) Lahore",
     period: "2021-2025",
-    grade: "GPA A+",
+    grade: "",
     details: [
-      "Thesis: Beam-Driven Instability in a Cairns-Distributed Plasma",
+      "Thesis: Beam-Driven Instability in a Cairns-Distributed Plasma (Grade: A+)",
       "Coursework: Computational Physics, Statistical Physics, Mathematical Methods, Modern Physics",
     ],
   },
@@ -83,6 +86,19 @@ const projects = [
 ]
 
 const skills = [
+  {
+    label: "Core competencies",
+    items: [
+      "Physics",
+      "Data Science",
+      "Artificial Intelligence",
+      "Computational Physics",
+      "Geophysics",
+      "Quantum Computing",
+      "Python (NumPy, Pandas, Scikit-learn)",
+      "Machine Learning",
+    ],
+  },
   {
     label: "Scientific computing",
     items: ["Python", "MATLAB", "OriginLab", "Data cleaning", "Database management"],
@@ -190,8 +206,8 @@ export default function CvPage() {
               Shoaib Ur Rehman
             </h1>
             <p className="mt-1 text-[13px] text-slate-500">
-              Physics Graduate &nbsp;|&nbsp; Computational &amp; Plasma Physics &nbsp;|&nbsp; AI
-              &amp; Scientific Computing
+              Physics Graduate &nbsp;|&nbsp; Computational Physics &amp; Geophysics &nbsp;|&nbsp;
+              Data Science &amp; AI
             </p>
 
             <ul className="mt-3 space-y-1 border-t-2 border-[#1e3a8a] pt-3 text-[12.5px] text-slate-600">
@@ -243,12 +259,15 @@ export default function CvPage() {
           <div className="mt-5">
             <Section title="Summary">
               <p>
-                Physics graduate (BS Hons., GCU Lahore, 2021-2025, GPA A+) with research in
-                computational and plasma physics. Thesis: Beam-Driven Instability in a
-                Cairns-Distributed Plasma. Strong in Computational Physics, Statistical Physics,
-                Mathematical Methods. Certified Google AI Essentials, Global Quantum Challenge
-                2026. Built 3 interactive physics labs. Seeking MSc / Research Internship in
-                Geophysics / Data Science / Scientific Computing in Germany/EU.
+                Physics graduate (BS Physics, Government College University (GCU) Lahore, 2021-2025)
+                with research in computational and plasma physics. Thesis: Beam-Driven Instability in
+                a Cairns-Distributed Plasma. Strong in Computational Physics, Statistical Physics,
+                Mathematical Methods. Certified Google AI Essentials, Global Quantum Challenge 2026.
+                Built 3 interactive physics labs.
+              </p>
+              <p className="font-medium text-[#1e3a8a]">
+                Seeking MSc Admission / Research Internship in Physics, Data Science &amp; AI | Focus:
+                Computational Physics, Geophysics and Quantum Technologies
               </p>
             </Section>
 
@@ -263,8 +282,13 @@ export default function CvPage() {
                       </span>
                     </h3>
                     <p className="text-[12.5px] text-slate-500">
-                      {item.period} &nbsp;&middot;&nbsp;{" "}
-                      <span className="font-semibold text-[#1e3a8a]">{item.grade}</span>
+                      {item.period}
+                      {item.grade && (
+                        <>
+                          {" "}&nbsp;&middot;&nbsp;{" "}
+                          <span className="font-semibold text-[#1e3a8a]">{item.grade}</span>
+                        </>
+                      )}
                     </p>
                   </div>
                   {item.details.length > 0 && (
