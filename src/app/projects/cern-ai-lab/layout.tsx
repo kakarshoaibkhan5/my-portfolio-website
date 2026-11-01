@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "CERN AI Dashboard - Analyzing Real Particle Physics Data with AI",
+  title: "CERN AI Lab - Analyzing Real Particle Physics Data with AI",
   description:
     "CERN Data Explorer: an AI-powered Higgs boson analysis built with Python, Pandas, Scikit-learn, Next.js, and Chart.js. A physics-to-data-science research project by Shoaib Ur Rehman.",
   keywords: [
@@ -17,9 +17,9 @@ export const metadata: Metadata = {
     "Shoaib Ur Rehman",
   ],
   openGraph: {
-    title: "CERN AI Dashboard - AI Powered Particle Physics",
+    title: "CERN AI Lab - AI Powered Particle Physics",
     description:
-      "Analyzing real CERN Open Data with AI: 10k+ collision events, 94% classifier accuracy, and an interactive Higgs boson dashboard.",
+      "Analyzing real CERN Open Data with AI: 10k+ collision events, 94% classifier accuracy, and an interactive Higgs boson explorer.",
     type: "website",
   },
 }

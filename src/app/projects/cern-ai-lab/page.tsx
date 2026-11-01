@@ -201,7 +201,7 @@ export default function CernAiDashboardPage() {
                 href="#dashboard"
                 className="group inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#38BDF8] to-[#A78BFA] px-6 py-3 text-sm font-semibold text-[#0B1224] shadow-[0_18px_50px_-18px_rgba(56,189,248,0.75)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_22px_60px_-16px_rgba(56,189,248,0.9)]"
               >
-                Explore the Dashboard
+                Explore the Lab
                 <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
               </a>
               <a
@@ -254,7 +254,7 @@ export default function CernAiDashboardPage() {
             <div>
               <div className="inline-flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-sky-400">
                 <BarChart3 className="h-3.5 w-3.5" />
-                Live Analysis Dashboard
+                Live Analysis Lab
               </div>
               <h2 className="mt-3 text-2xl font-bold tracking-tight text-white sm:text-3xl">
                 Three views. One physics question.
@@ -522,7 +522,7 @@ export default function CernAiDashboardPage() {
               <div>
                 <div className="inline-flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-slate-500">
                   <Atom className="h-3.5 w-3.5 text-sky-400" />
-                  CERN AI Dashboard
+                  CERN AI Lab
                 </div>
                 <p className="mt-3 max-w-2xl text-sm text-slate-400">
                   Built for Erasmus Mundus Masters in Data Science &amp; AI -
